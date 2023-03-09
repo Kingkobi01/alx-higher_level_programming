@@ -3,12 +3,11 @@
 
 def fizzbuzz():
     for i in range(1, 101):
-        separator = " " if i < 100 else ""
         if i % 15 == 0:
-            print("FizzBuzz", end=separator)
+            print("FizzBuzz", end=" ")
         elif i % 3 == 0:
-            print("Fizz", end=separator)
+            print("Fizz", end=" ")
         elif i % 5 == 0:
-            print("Buzz", end=separator)
+            print("Buzz", end=" ")
         else:
-            print("{}".format(i), end=separator)
+            print("{}".format(i), end=" ")
