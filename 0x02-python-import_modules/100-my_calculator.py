@@ -4,7 +4,6 @@ if __name__ == "__main__":
     from sys import argv
     from calculator_1 import add, sub, mul, div
 
-
     num_of_args = len(argv) - 1
 
     if num_of_args != 3:
