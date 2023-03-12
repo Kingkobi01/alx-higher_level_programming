@@ -13,12 +13,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
 
 def clean_tuple(tple=()):
-    if len(tple) < 2:
-        if len(tple) == 1:
-            tple = (tple[0], 0)
-        else:
-            tple = (0, 0)
-    elif len(tple) > 2:
-        tple = (tple[0], tple[1])
-
-    return tple
+    return tple[:2] + (0, 0) if len(tple) < 2 else tple[:2]
