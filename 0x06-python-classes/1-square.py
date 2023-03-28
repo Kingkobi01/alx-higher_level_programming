@@ -5,7 +5,8 @@
 
 
 class Square:
-    """Instatiates a square"""
+    """Defines a square"""
 
     def __init__(self, size) -> None:
+        """Initializes a square"""
         self.__size = size
