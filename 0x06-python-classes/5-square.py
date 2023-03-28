@@ -41,10 +41,13 @@ class Square:
         self.__size = value
 
     def my_print(self):
-        for i in range(self.__size):
-            for j in range(self.__size):
-                print("#", end="")
+        if self.__size == 0:
             print()
+        else:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end="")
+                print()
 
     def area(self) -> int:
         """Calculates the area of the square using size"""
