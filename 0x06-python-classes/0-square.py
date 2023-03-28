@@ -1,4 +1,10 @@
+#!/usr/bin/python3
+
+# 0-square.py by Kwabena Boakye
+"""This class is a blueprint for making square instances."""
+
+
 class Square:
-    """This class is use for making instances of squares"""
+    """Does nothing"""
 
     pass
