@@ -15,7 +15,8 @@ class Square:
                     in space
         Raises:
             TypeError: if size is not an integer
-            ValueError: if size is less than 0"""
+            ValueError: if size is less than 0
+        """
 
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -74,6 +75,7 @@ class Square:
     def pos_print(self):
         pos = ""
         if self.__size == 0:
+            pos +="\n"
             return pos
 
         for y in range(self.__position[1]):
