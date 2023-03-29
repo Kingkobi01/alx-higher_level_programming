@@ -55,7 +55,7 @@ class Square:
         """Returns position of square in space"""
         return self.__position
 
-    @size.setter
+    @position.setter
     def position(self, value) -> None:
         """Sets size of square to a different value, `value`
         Args:
