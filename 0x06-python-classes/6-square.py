@@ -33,7 +33,7 @@ class Square:
 
     @property
     def size(self) -> int:
-        """Returns size of squares"""
+        """Returns size of square"""
         return self.__size
 
     @size.setter
@@ -52,7 +52,22 @@ class Square:
 
     @property
     def position(self) -> tuple:
+        """Returns position of square in space"""
         return self.__position
+
+    @size.setter
+    def position(self, value) -> None:
+        """Sets size of square to a different value, `value`
+        Args:
+            size: represents the size of the square defined
+        Raises:
+            TypeError: if size is not an integer
+            ValueError: if size is less than 0"""
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
 
     def my_print(self):
         """Prints the square in position"""
