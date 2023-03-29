@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+
+# 0-square.py by Kwabena Boakye
+"""This class is a blueprint for making square instances."""
+
+
 class Square:
-    """Square Class
-
-    A Square Class
-
-    """
+    """Defines a square"""
 
     def __init__(self, size=0, position=(0, 0)):
         """__init__
