@@ -75,7 +75,7 @@ class Square:
     def pos_print(self):
         pos = ""
         if self.__size == 0:
-            pos +="\n"
+            pos += "\n"
             return pos
 
         for y in range(self.__position[1]):
@@ -95,4 +95,4 @@ class Square:
 
     def area(self) -> int:
         """Calculates the area of the square using size"""
-        return self.__size ** 2
+       return self.__size ** 2
