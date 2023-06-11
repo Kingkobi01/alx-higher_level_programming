@@ -2,8 +2,10 @@
 
 const Rectangle = class {
   constructor (w, h) {
-    this.width = parseInt(w) > 1 ? w : undefined;
-    this.height = parseInt(h) > 1 ? h : undefined;
+    if (parseInt(w, 10) && parseInt(h, 10) && h > 0) {
+      this.width = w;
+      this.height = h;
+    }
   }
 };
 
