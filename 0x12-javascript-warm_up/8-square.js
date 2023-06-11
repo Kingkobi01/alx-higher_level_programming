@@ -2,7 +2,7 @@
 
 const size = parseInt(process.argv[2]);
 
-if (size !== 0 && !size) {
+if (!size) {
   console.log('Missing size');
 } else {
   for (let s1 = size; s1 > 0; s1--) {
