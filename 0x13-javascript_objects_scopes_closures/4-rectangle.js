@@ -16,8 +16,20 @@ const Rectangle = class {
         myVar += 'X';
         y++;
       }
+
       console.log(myVar);
     }
+  }
+
+  rotate () {
+    const temp = this.height;
+    this.height = this.width;
+    this.width = temp;
+  }
+
+  double () {
+    this.height *= 2;
+    this.width *= 2;
   }
 };
 
