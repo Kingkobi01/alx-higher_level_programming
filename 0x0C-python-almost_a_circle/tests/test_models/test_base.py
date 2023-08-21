@@ -1,4 +1,11 @@
+#!/usr/bin/env python3
+
+"""
+A module that test differents behaviors
+of the Base class
+"""
 import unittest
+import pep8
 from models.base import Base
 
 class TestModel(unittest.TestCase):
