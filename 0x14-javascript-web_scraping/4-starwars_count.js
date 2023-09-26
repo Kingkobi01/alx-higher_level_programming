@@ -11,9 +11,8 @@ request(starWarsUri, function (error, response, body) {
   const results = body.results;
   let numberOfAppearances = 0;
   for (const film of results) {
-    if (
-      film.characters.includes("https://swapi-api.alx-tools.com/api/people/18")
-    ) {
+    const id = film.split("/")[5];
+    if (id == 18) {
       numberOfAppearances += 1;
     }
   }
