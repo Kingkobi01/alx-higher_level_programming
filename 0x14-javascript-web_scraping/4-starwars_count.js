@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
-const request = require('request');
-const starWarsUri = 'https://swapi-api.hbtn.io/api/films';
+const request = require("request");
+const starWarsUri = "https://swapi-api.hbtn.io/api/films";
 
 request(starWarsUri, function (error, response, body) {
   if (error) {
@@ -9,12 +9,16 @@ request(starWarsUri, function (error, response, body) {
   }
   body = JSON.parse(body);
   const results = body.results;
-  let numberOfApperarances = 0  
-  for (const film in films){
-    if (isinArray(film.characters,'https://swapi-api.alx-tools.com/api/people/18'){
-
+  let numberOfApperarances = 0;
+  for (const film in films) {
+    if (
+      isinArray(
+        film.characters,
+        "https://swapi-api.alx-tools.com/api/people/18"
+      )
+    ) {
       numberOfAppearances += 1;
-}
-}
+    }
+  }
   console.log(numberOfAppearances);
 });
