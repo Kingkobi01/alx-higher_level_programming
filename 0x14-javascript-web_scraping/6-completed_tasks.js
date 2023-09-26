@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const request = require('request');
+const request = require("request");
 
 request(process.argv[2], function (err, res, body) {
   if (err) {
@@ -14,10 +14,12 @@ request(process.argv[2], function (err, res, body) {
 
   for (const todo of body) {
     const user = todo.userId;
-    if (todoObj[user] === undefined) {
+    const completed = todo.completed;
+
+    if (todoObj[user] && completed) {
       todoObj[user] = 0;
     }
-    if (todo.completed) {
+    if (completed) {
       todoObj[user] += 1;
     }
   }
