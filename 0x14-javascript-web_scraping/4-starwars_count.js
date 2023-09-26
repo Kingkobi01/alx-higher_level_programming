@@ -10,7 +10,7 @@ request(starWarsUri, function (error, response, body) {
   body = JSON.parse(body);
   const results = body.results;
   let numberOfApperarances = 0;
-  for (const film in films) {
+  for (const film in results) {
     if (
       isinArray(
         film.characters,
