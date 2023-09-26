@@ -11,7 +11,7 @@ request(starWarsUri, function (error, response, body) {
   const results = body.results;
   let numberOfAppearances = 0;
   for (const film of results) {
-    const id = film.split("/")[5];
+    const id = film.characters.split("/")[5];
     if (id == 18) {
       numberOfAppearances += 1;
     }
