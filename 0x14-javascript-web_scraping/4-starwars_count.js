@@ -1,9 +1,8 @@
 #!/usr/bin/node
 
-const request = require('request');
-const starWarsUri = process.argv[2];
+const request = require("request");
 
-request(starWarsUri, function (error, response, body) {
+request(process.argv[2], function (error, response, body) {
   if (error) {
     console.log(error);
   }
@@ -14,8 +13,8 @@ request(starWarsUri, function (error, response, body) {
     const characters = film.characters;
 
     for (const character of characters) {
-      const id = character.split('/')[5];
-      if (id === 18) {
+      const id = character.split("/")[5];
+      if (parseInt(id) === 18) {
         numberOfAppearances += 1;
       }
     }
