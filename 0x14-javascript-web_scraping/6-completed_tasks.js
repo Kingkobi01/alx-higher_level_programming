@@ -16,7 +16,7 @@ request(process.argv[2], function (err, res, body) {
     const user = todo.userId;
     const completed = todo.completed;
 
-    if (todoObj[user] && completed) {
+    if (!todoObj[user] && completed) {
       todoObj[user] = 0;
     }
     if (completed) {
