@@ -10,7 +10,7 @@ request(starWarsUri, function (error, response, body) {
   body = JSON.parse(body);
   const results = body.results;
   let numberOfApperarances = 0;
-  for (const film in results) {
+  for (const film of results) {
     if (
       film.characters.includes("https://swapi-api.alx-tools.com/api/people/18")
     ) {
