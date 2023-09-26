@@ -12,10 +12,7 @@ request(starWarsUri, function (error, response, body) {
   let numberOfApperarances = 0;
   for (const film in results) {
     if (
-      isinArray(
-        film.characters,
-        "https://swapi-api.alx-tools.com/api/people/18"
-      )
+      film.characters.includes("https://swapi-api.alx-tools.com/api/people/18")
     ) {
       numberOfAppearances += 1;
     }
